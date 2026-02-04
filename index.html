@@ -43,17 +43,6 @@
             width: 100%;
             height: calc(100vh - 120px);
         }
-        /* CCAF logo fixed overlay — sits above the timeline without touching its DOM */
-        #ccaf-overlay {
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            height: 50px;
-            width: auto;
-            z-index: 9999;
-            opacity: 0.85;
-            pointer-events: none;
-        }
     </style>
 </head>
 <body>
@@ -62,7 +51,6 @@
         <h1>The History of Artificial Intelligence</h1>
         <p>From mathematical foundations to the age of generative AI</p>
     </div>
-    <img id="ccaf-overlay" src="https://d56vh6ph4jjmq.cloudfront.net/cambridge/logos/ccaf-logo-vert.png" alt="CCAF">
     <div id="timeline-embed"></div>
 
     <script>
