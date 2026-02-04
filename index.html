@@ -11,14 +11,16 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background: #1a1a2e;
+            background: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         #header {
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: #fff;
+            background: #ffffff;
+            color: #1a1a2e;
             text-align: center;
             padding: 30px 20px 20px;
+            position: relative;
+            border-bottom: 2px solid #e0e0e0;
         }
         #header h1 {
             margin: 0 0 8px;
@@ -28,16 +30,34 @@
         #header p {
             margin: 0;
             font-size: 1.1em;
-            opacity: 0.8;
+            opacity: 0.6;
+        }
+        #ccaf-logo-header {
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            height: 60px;
+            width: auto;
         }
         #timeline-embed {
             width: 100%;
             height: calc(100vh - 120px);
         }
+        /* CCAF logo overlay on every slide */
+        .tl-slide .ccaf-watermark {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            height: 48px;
+            width: auto;
+            z-index: 100;
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
     <div id="header">
+        <img id="ccaf-logo-header" src="https://d56vh6ph4jjmq.cloudfront.net/cambridge/logos/ccaf-logo-vert.png" alt="CCAF Logo">
         <h1>The History of Artificial Intelligence</h1>
         <p>From mathematical foundations to the age of generative AI</p>
     </div>
@@ -51,7 +71,7 @@
                     "text": "<p>Artificial Intelligence has evolved from a theoretical concept in the 1940s to one of the most transformative technologies of the 21st century. Explore the key milestones, breakthroughs, and pivotal moments that shaped the field.</p>"
                 },
                 "media": {
-                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Artificial_neural_network.svg/800px-Artificial_neural_network.svg.png",
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Artificial_neural_network.svg",
                     "caption": "A neural network diagram — the foundational concept of modern AI",
                     "credit": "Wikimedia Commons"
                 }
@@ -124,7 +144,7 @@
                         "text": "<p>SRI International developed <strong>Shakey</strong>, the first general-purpose mobile robot able to reason about its own actions. Shakey could navigate rooms, push objects, and plan multi-step actions — integrating perception, planning, and execution for the first time. It used the A* search algorithm and STRIPS planner, both still used in AI today.</p>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/SRI_Shakey_with_calculation.jpg/400px-SRI_Shakey_with_calculation.jpg",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/SRI_Shakey_with_callouts.jpg",
                         "caption": "Shakey the Robot at SRI International",
                         "credit": "SRI International / Wikimedia Commons"
                     }
@@ -161,8 +181,8 @@
                         "text": "<p>Rumelhart, Hinton, and Williams published their landmark paper on <strong>backpropagation</strong>, demonstrating how multi-layer neural networks could learn internal representations. While the algorithm had been invented earlier, this paper made it practical and accessible. It became the standard method for training neural networks and remains fundamental to deep learning today.</p>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Gosset_-_the_back-propagation_algorithm.svg/800px-Gosset_-_the_back-propagation_algorithm.svg.png",
-                        "caption": "Backpropagation computes gradients layer by layer",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/MLP-training-loop.svg",
+                        "caption": "Backpropagation training loop for a multi-layer perceptron",
                         "credit": "Wikimedia Commons"
                     }
                 },
@@ -174,7 +194,7 @@
                         "text": "<p>Expert systems proved brittle and expensive to maintain. The Fifth Generation Project failed to meet its goals. The LISP machine market collapsed. Once again, AI was seen as overhyped. Funding dried up and the term 'AI' became almost toxic in grant applications. Researchers rebranded their work as 'machine learning', 'informatics', or 'knowledge systems' to survive.</p>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/LISP_machine.jpg/800px-LISP_machine.jpg",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Symbolics_LISP_Machine%2C_Google_NY_office_computer_museum.jpg",
                         "caption": "A Symbolics LISP Machine — the hardware that defined 1980s AI",
                         "credit": "Wikimedia Commons"
                     }
@@ -198,7 +218,7 @@
                         "text": "<p>IBM's <strong>Watson</strong> competed against Jeopardy! champions Ken Jennings and Brad Rutter — and won decisively. Watson processed natural language, understood puns and wordplay, and searched millions of documents in seconds. Jennings famously wrote on his Final Jeopardy answer: <em>'I, for one, welcome our new computer overlords.'</em></p>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/IBM_Watson.PNG/800px-IBM_Watson.PNG",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_Watson_w_Jeopardy.jpg",
                         "caption": "Watson competing on Jeopardy!",
                         "credit": "IBM / Wikimedia Commons"
                     }
@@ -210,7 +230,7 @@
                         "text": "<p>Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton entered <strong>AlexNet</strong> into the ImageNet competition and won by a staggering margin, reducing the error rate from 26% to 15%. This convolutional neural network, trained on GPUs, proved that deep learning could dramatically outperform traditional computer vision. It triggered a paradigm shift — within two years, nearly every top entry in ImageNet used deep learning.</p>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Conv_layers.png/800px-Conv_layers.png",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png",
                         "caption": "Convolutional neural network layers — the architecture behind AlexNet",
                         "credit": "Wikimedia Commons"
                     }
@@ -222,8 +242,8 @@
                         "text": "<p>Ian Goodfellow introduced <strong>GANs</strong> — a framework where two neural networks (a generator and a discriminator) compete against each other. The generator creates fake data; the discriminator tries to detect it. This adversarial training produces remarkably realistic synthetic images, video, and audio. GANs opened the door to AI-generated art, deepfakes, and creative AI applications.</p>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/GAN_Handwriting_Digits.png/800px-GAN_Handwriting_Digits.png",
-                        "caption": "GAN-generated handwritten digits improving over training iterations",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Generative_Adversarial_Network_illustration.svg",
+                        "caption": "How a Generative Adversarial Network works",
                         "credit": "Wikimedia Commons"
                     }
                 },
@@ -282,7 +302,7 @@
                         "text": "<p>Stability AI released <strong>Stable Diffusion</strong>, an open-source text-to-image model. Unlike DALL-E 2 (released months earlier), anyone could download and run it locally. The model used a latent diffusion architecture to generate detailed images from text descriptions. This democratised AI art creation and sparked intense debate about copyright, artist livelihoods, and the nature of creativity.</p>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Stable_Diffusion_Generated_Image_-_A_photograph_of_an_astronaut_riding_a_horse.png/800px-Stable_Diffusion_Generated_Image_-_A_photograph_of_an_astronaut_riding_a_horse.png",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/A_depiction_of_an_astronaut_riding_a_horse_2022-08-28.png",
                         "caption": "'A photograph of an astronaut riding a horse' — generated by Stable Diffusion",
                         "credit": "Stability AI / Wikimedia Commons"
                     }
@@ -341,12 +361,32 @@
         var options = {
             timenav_position: "bottom",
             start_at_slide: 0,
-            default_bg_color: "#1a1a2e",
+            default_bg_color: "#ffffff",
             scale_factor: 2,
             optimal_tick_width: 100
         };
 
         window.timeline = new TL.Timeline('timeline-embed', timelineData, options);
+
+        // Inject CCAF logo into every slide after timeline renders
+        function addCCAFLogos() {
+            var slides = document.querySelectorAll('.tl-slide');
+            slides.forEach(function(slide) {
+                if (!slide.querySelector('.ccaf-watermark')) {
+                    var logo = document.createElement('img');
+                    logo.className = 'ccaf-watermark';
+                    logo.src = 'https://d56vh6ph4jjmq.cloudfront.net/cambridge/logos/ccaf-logo-vert.png';
+                    logo.alt = 'CCAF';
+                    slide.style.position = 'relative';
+                    slide.appendChild(logo);
+                }
+            });
+        }
+
+        // Run after initial render and on slide changes
+        setTimeout(addCCAFLogos, 1000);
+        var observer = new MutationObserver(addCCAFLogos);
+        observer.observe(document.getElementById('timeline-embed'), { childList: true, subtree: true });
     </script>
 </body>
 </html>
