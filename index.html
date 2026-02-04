@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The History of Artificial Intelligence</title>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #1a1a2e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #header {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px 20px;
+        }
+        #header h1 {
+            margin: 0 0 8px;
+            font-size: 2.2em;
+            letter-spacing: 1px;
+        }
+        #header p {
+            margin: 0;
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+        #timeline-embed {
+            width: 100%;
+            height: calc(100vh - 120px);
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>The History of Artificial Intelligence</h1>
+        <p>From mathematical foundations to the age of generative AI</p>
+    </div>
+    <div id="timeline-embed"></div>
+
+    <script>
+        var timelineData = {
+            "title": {
+                "text": {
+                    "headline": "The History of Artificial Intelligence",
+                    "text": "<p>Artificial Intelligence has evolved from a theoretical concept in the 1940s to one of the most transformative technologies of the 21st century. Explore the key milestones, breakthroughs, and pivotal moments that shaped the field.</p>"
+                },
+                "media": {
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Artificial_neural_network.svg/800px-Artificial_neural_network.svg.png",
+                    "caption": "A neural network diagram — the foundational concept of modern AI",
+                    "credit": "Wikimedia Commons"
+                }
+            },
+            "events": [
+                {
+                    "start_date": {"year": "1943"},
+                    "text": {
+                        "headline": "McCulloch-Pitts Neuron Model",
+                        "text": "<p>Warren McCulloch and Walter Pitts published <em>'A Logical Calculus of the Ideas Immanent in Nervous Activity'</em>, proposing the first mathematical model of an artificial neuron. This paper laid the theoretical groundwork for neural networks and all of modern AI.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/800px-ArtificialNeuronModel_english.png",
+                        "caption": "The McCulloch-Pitts neuron model",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1950"},
+                    "text": {
+                        "headline": "Turing Test Proposed",
+                        "text": "<p>Alan Turing published <em>'Computing Machinery and Intelligence'</em> in the journal Mind, posing the famous question: <strong>'Can machines think?'</strong> He proposed the Imitation Game (now called the Turing Test) as a practical measure of machine intelligence — a benchmark that still influences AI research today.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg",
+                        "caption": "Alan Turing — father of theoretical computer science and AI",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1956"},
+                    "text": {
+                        "headline": "The Dartmouth Conference — AI is Born",
+                        "text": "<p>John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon organised the Dartmouth Summer Research Project on Artificial Intelligence. This workshop is widely considered the <strong>founding event of AI as a field</strong>. The term 'Artificial Intelligence' was coined here. The proposal boldly claimed that every aspect of learning could in principle be precisely described and simulated by a machine.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/John_McCarthy_Stanford.jpg/800px-John_McCarthy_Stanford.jpg",
+                        "caption": "John McCarthy — coined the term 'Artificial Intelligence'",
+                        "credit": "Wikimedia Commons / null0, CC BY-SA 2.0"
+                    }
+                },
+                {
+                    "start_date": {"year": "1958"},
+                    "text": {
+                        "headline": "The Perceptron",
+                        "text": "<p>Frank Rosenblatt built the <strong>Mark I Perceptron</strong> at Cornell — the first machine capable of learning through trial and error. Implemented on custom hardware, it could recognise simple patterns. The New York Times reported it as an 'embryo of a computer that the Navy expects will be able to walk, talk, see, write, reproduce itself and be conscious of its existence.'</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/en/5/52/Mark_I_perceptron.jpeg",
+                        "caption": "The Mark I Perceptron machine at Cornell Aeronautical Laboratory",
+                        "credit": "Cornell University"
+                    }
+                },
+                {
+                    "start_date": {"year": "1966"},
+                    "text": {
+                        "headline": "ELIZA — First Chatbot",
+                        "text": "<p>Joseph Weizenbaum at MIT created <strong>ELIZA</strong>, a natural language processing program that simulated a Rogerian psychotherapist. Using simple pattern matching and substitution, ELIZA gave a convincing illusion of understanding. Some users became emotionally attached to it — the first demonstration of the <em>'ELIZA effect'</em>, where humans attribute understanding to machines.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png",
+                        "caption": "A conversation with ELIZA",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1969"},
+                    "text": {
+                        "headline": "Shakey the Robot",
+                        "text": "<p>SRI International developed <strong>Shakey</strong>, the first general-purpose mobile robot able to reason about its own actions. Shakey could navigate rooms, push objects, and plan multi-step actions — integrating perception, planning, and execution for the first time. It used the A* search algorithm and STRIPS planner, both still used in AI today.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/SRI_Shakey_with_calculation.jpg/400px-SRI_Shakey_with_calculation.jpg",
+                        "caption": "Shakey the Robot at SRI International",
+                        "credit": "SRI International / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1974"},
+                    "end_date": {"year": "1980"},
+                    "text": {
+                        "headline": "The First AI Winter",
+                        "text": "<p>After years of overpromising and underdelivering, AI funding was dramatically cut. The Lighthill Report (1973) in the UK was particularly damning, concluding that AI had failed to achieve its 'grandiose objectives.' Government agencies in the US and UK slashed funding. Researchers scattered to other fields. The era showed that <strong>hype without substance leads to disillusionment</strong> — a recurring pattern in AI history.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png",
+                        "caption": "AI winters are cycles of hype and disappointment",
+                        "credit": "Illustration"
+                    }
+                },
+                {
+                    "start_date": {"year": "1980"},
+                    "text": {
+                        "headline": "Expert Systems Boom",
+                        "text": "<p><strong>Expert systems</strong> revived commercial interest in AI. Programs like XCON (R1) at DEC saved the company $40 million per year by configuring computer orders. These rule-based systems encoded human expertise as if-then rules. Japan launched the ambitious Fifth Generation Computer Project, and AI companies saw massive investment. By 1985, the AI industry was worth over $1 billion.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tsunami_by_hokusai_19th_century.jpg/800px-Tsunami_by_hokusai_19th_century.jpg",
+                        "caption": "Japan's Fifth Generation Project aimed to leapfrog Western computing",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1986"},
+                    "text": {
+                        "headline": "Backpropagation Popularised",
+                        "text": "<p>Rumelhart, Hinton, and Williams published their landmark paper on <strong>backpropagation</strong>, demonstrating how multi-layer neural networks could learn internal representations. While the algorithm had been invented earlier, this paper made it practical and accessible. It became the standard method for training neural networks and remains fundamental to deep learning today.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Gosset_-_the_back-propagation_algorithm.svg/800px-Gosset_-_the_back-propagation_algorithm.svg.png",
+                        "caption": "Backpropagation computes gradients layer by layer",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1988"},
+                    "end_date": {"year": "1993"},
+                    "text": {
+                        "headline": "The Second AI Winter",
+                        "text": "<p>Expert systems proved brittle and expensive to maintain. The Fifth Generation Project failed to meet its goals. The LISP machine market collapsed. Once again, AI was seen as overhyped. Funding dried up and the term 'AI' became almost toxic in grant applications. Researchers rebranded their work as 'machine learning', 'informatics', or 'knowledge systems' to survive.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/LISP_machine.jpg/800px-LISP_machine.jpg",
+                        "caption": "A Symbolics LISP Machine — the hardware that defined 1980s AI",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1997", "month": "5", "day": "11"},
+                    "text": {
+                        "headline": "Deep Blue Defeats Kasparov",
+                        "text": "<p>IBM's <strong>Deep Blue</strong> defeated reigning world chess champion Garry Kasparov in a six-game match — the first time a computer beat a world champion under standard tournament conditions. Deep Blue evaluated 200 million positions per second. The event was a global media sensation and a symbolic milestone: machines could now beat the best humans at the 'game of kings.'</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/800px-Deep_Blue.jpg",
+                        "caption": "The Deep Blue supercomputer at IBM",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2011", "month": "2"},
+                    "text": {
+                        "headline": "IBM Watson Wins Jeopardy!",
+                        "text": "<p>IBM's <strong>Watson</strong> competed against Jeopardy! champions Ken Jennings and Brad Rutter — and won decisively. Watson processed natural language, understood puns and wordplay, and searched millions of documents in seconds. Jennings famously wrote on his Final Jeopardy answer: <em>'I, for one, welcome our new computer overlords.'</em></p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/IBM_Watson.PNG/800px-IBM_Watson.PNG",
+                        "caption": "Watson competing on Jeopardy!",
+                        "credit": "IBM / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2012"},
+                    "text": {
+                        "headline": "AlexNet — The Deep Learning Revolution",
+                        "text": "<p>Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton entered <strong>AlexNet</strong> into the ImageNet competition and won by a staggering margin, reducing the error rate from 26% to 15%. This convolutional neural network, trained on GPUs, proved that deep learning could dramatically outperform traditional computer vision. It triggered a paradigm shift — within two years, nearly every top entry in ImageNet used deep learning.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Conv_layers.png/800px-Conv_layers.png",
+                        "caption": "Convolutional neural network layers — the architecture behind AlexNet",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2014"},
+                    "text": {
+                        "headline": "Generative Adversarial Networks (GANs)",
+                        "text": "<p>Ian Goodfellow introduced <strong>GANs</strong> — a framework where two neural networks (a generator and a discriminator) compete against each other. The generator creates fake data; the discriminator tries to detect it. This adversarial training produces remarkably realistic synthetic images, video, and audio. GANs opened the door to AI-generated art, deepfakes, and creative AI applications.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/GAN_Handwriting_Digits.png/800px-GAN_Handwriting_Digits.png",
+                        "caption": "GAN-generated handwritten digits improving over training iterations",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2016", "month": "3"},
+                    "text": {
+                        "headline": "AlphaGo Defeats Lee Sedol",
+                        "text": "<p>Google DeepMind's <strong>AlphaGo</strong> defeated 18-time world Go champion Lee Sedol 4–1 in Seoul. Go has more possible board positions than atoms in the universe, making brute-force search impossible. AlphaGo used deep reinforcement learning and Monte Carlo tree search. Its famous <strong>Move 37</strong> in Game 2 — a move no human would play — was described as 'beautiful' by commentators and showed AI could be creative.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/FloorGoban.JPG/800px-FloorGoban.JPG",
+                        "caption": "A Go board — the ancient game AlphaGo mastered",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2017", "month": "6"},
+                    "text": {
+                        "headline": "The Transformer — 'Attention Is All You Need'",
+                        "text": "<p>Researchers at Google published the <strong>Transformer</strong> architecture, replacing recurrence with self-attention mechanisms. This allowed models to process entire sequences in parallel rather than word by word, dramatically improving training speed and performance. The Transformer became the foundation for virtually all modern large language models — GPT, BERT, Claude, Gemini, and LLaMA all descend from this paper.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The-Transformer-model-architecture.png/800px-The-Transformer-model-architecture.png",
+                        "caption": "The Transformer model architecture diagram from the original paper",
+                        "credit": "Vaswani et al. / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2018"},
+                    "text": {
+                        "headline": "GPT and BERT — Pre-trained Language Models",
+                        "text": "<p>Two landmark models arrived: OpenAI's <strong>GPT</strong> (Generative Pre-trained Transformer) and Google's <strong>BERT</strong> (Bidirectional Encoder Representations from Transformers). Both showed that pre-training on massive text corpora, then fine-tuning for specific tasks, dramatically improved NLP performance across the board. This 'pre-train then fine-tune' paradigm became the dominant approach in AI.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png",
+                        "caption": "The GPT family would grow to become one of the most influential AI systems",
+                        "credit": "OpenAI / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2020", "month": "6"},
+                    "text": {
+                        "headline": "GPT-3 — Scale Changes Everything",
+                        "text": "<p>OpenAI released <strong>GPT-3</strong> with 175 billion parameters — 100x larger than GPT-2. It demonstrated remarkable <strong>few-shot learning</strong>: given just a few examples in a prompt, it could write essays, code, poetry, translate languages, and answer questions without any fine-tuning. GPT-3 showed that scaling up model size and training data could unlock emergent capabilities no one had explicitly programmed.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/800px-OpenAI_Logo.svg.png",
+                        "caption": "OpenAI — creators of the GPT series",
+                        "credit": "OpenAI / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2022", "month": "8"},
+                    "text": {
+                        "headline": "Stable Diffusion — AI Art Goes Open Source",
+                        "text": "<p>Stability AI released <strong>Stable Diffusion</strong>, an open-source text-to-image model. Unlike DALL-E 2 (released months earlier), anyone could download and run it locally. The model used a latent diffusion architecture to generate detailed images from text descriptions. This democratised AI art creation and sparked intense debate about copyright, artist livelihoods, and the nature of creativity.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Stable_Diffusion_Generated_Image_-_A_photograph_of_an_astronaut_riding_a_horse.png/800px-Stable_Diffusion_Generated_Image_-_A_photograph_of_an_astronaut_riding_a_horse.png",
+                        "caption": "'A photograph of an astronaut riding a horse' — generated by Stable Diffusion",
+                        "credit": "Stability AI / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2022", "month": "11", "day": "30"},
+                    "text": {
+                        "headline": "ChatGPT — AI Goes Mainstream",
+                        "text": "<p>OpenAI launched <strong>ChatGPT</strong>, a conversational interface built on GPT-3.5. It reached <strong>100 million users in two months</strong> — the fastest-growing consumer application in history. ChatGPT could hold extended conversations, write code, explain concepts, draft emails, and much more. It brought AI from research labs into everyday life and triggered a global race among tech companies to build competing systems.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png",
+                        "caption": "ChatGPT — the app that brought AI to the mainstream",
+                        "credit": "OpenAI / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2023", "month": "3", "day": "14"},
+                    "text": {
+                        "headline": "GPT-4 — Multimodal AI",
+                        "text": "<p>OpenAI released <strong>GPT-4</strong>, a multimodal model that could process both text and images. It passed the bar exam in the 90th percentile, scored highly on medical licensing exams, and demonstrated significantly improved reasoning over GPT-3.5. Anthropic released <strong>Claude</strong>, and Google launched <strong>Bard</strong> (later Gemini). The AI arms race intensified, with billions of dollars flowing into AI startups.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/800px-OpenAI_Logo.svg.png",
+                        "caption": "GPT-4 raised the bar for AI capabilities across benchmarks",
+                        "credit": "OpenAI / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2024"},
+                    "text": {
+                        "headline": "Open-Source AI & Agents",
+                        "text": "<p>2024 saw the rise of powerful <strong>open-source models</strong> like Meta's LLaMA 3 and Mistral, narrowing the gap with proprietary systems. <strong>AI agents</strong> — systems that can autonomously browse the web, write and execute code, and use tools — emerged as the next frontier. Claude gained computer use abilities, GPT-4o brought real-time multimodal conversation, and AI coding assistants became standard developer tools.</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Meta-Logo.png/800px-Meta-Logo.png",
+                        "caption": "Meta's open-source LLaMA models challenged proprietary AI",
+                        "credit": "Meta / Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "2025"},
+                    "text": {
+                        "headline": "Reasoning Models & AI Everywhere",
+                        "text": "<p>AI models gained advanced <strong>reasoning capabilities</strong> with OpenAI's o1/o3 and Anthropic's Claude featuring extended thinking. <strong>DeepSeek R1</strong> from China demonstrated that frontier-level reasoning could be achieved at a fraction of the cost. AI became embedded in virtually every industry — healthcare diagnostics, scientific research, legal analysis, software engineering, creative arts, and education. The question shifted from 'Can AI do this?' to 'How should we govern AI?'</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Anthropic_logo.svg/800px-Anthropic_logo.svg.png",
+                        "caption": "Anthropic — makers of Claude, focused on AI safety",
+                        "credit": "Anthropic / Wikimedia Commons"
+                    }
+                }
+            ]
+        };
+
+        var options = {
+            timenav_position: "bottom",
+            start_at_slide: 0,
+            default_bg_color: "#1a1a2e",
+            scale_factor: 2,
+            optimal_tick_width: 100
+        };
+
+        window.timeline = new TL.Timeline('timeline-embed', timelineData, options);
+    </script>
+</body>
+</html>
