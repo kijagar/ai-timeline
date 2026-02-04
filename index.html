@@ -43,15 +43,16 @@
             width: 100%;
             height: calc(100vh - 120px);
         }
-        /* CCAF logo overlay on every slide */
-        .tl-slide .ccaf-watermark {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            height: 48px;
+        /* CCAF logo fixed overlay — sits above the timeline without touching its DOM */
+        #ccaf-overlay {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            height: 50px;
             width: auto;
-            z-index: 100;
-            opacity: 0.9;
+            z-index: 9999;
+            opacity: 0.85;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -61,6 +62,7 @@
         <h1>The History of Artificial Intelligence</h1>
         <p>From mathematical foundations to the age of generative AI</p>
     </div>
+    <img id="ccaf-overlay" src="https://d56vh6ph4jjmq.cloudfront.net/cambridge/logos/ccaf-logo-vert.png" alt="CCAF">
     <div id="timeline-embed"></div>
 
     <script>
@@ -367,26 +369,6 @@
         };
 
         window.timeline = new TL.Timeline('timeline-embed', timelineData, options);
-
-        // Inject CCAF logo into every slide after timeline renders
-        function addCCAFLogos() {
-            var slides = document.querySelectorAll('.tl-slide');
-            slides.forEach(function(slide) {
-                if (!slide.querySelector('.ccaf-watermark')) {
-                    var logo = document.createElement('img');
-                    logo.className = 'ccaf-watermark';
-                    logo.src = 'https://d56vh6ph4jjmq.cloudfront.net/cambridge/logos/ccaf-logo-vert.png';
-                    logo.alt = 'CCAF';
-                    slide.style.position = 'relative';
-                    slide.appendChild(logo);
-                }
-            });
-        }
-
-        // Run after initial render and on slide changes
-        setTimeout(addCCAFLogos, 1000);
-        var observer = new MutationObserver(addCCAFLogos);
-        observer.observe(document.getElementById('timeline-embed'), { childList: true, subtree: true });
     </script>
 </body>
 </html>
